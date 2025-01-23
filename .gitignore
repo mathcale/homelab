@@ -2,6 +2,8 @@
 stack.env
 .env
 .env.production
+*.env
+!*.env.example
 *.db
 *.sqlite
 

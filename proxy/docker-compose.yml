@@ -1,0 +1,42 @@
+services:
+  proxy:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - proxydata:/data
+      - letsencrypt:/etc/letsencrypt
+    healthcheck:
+      test: ["CMD", "/usr/bin/check-health"]
+      interval: 10s
+      timeout: 3s
+  
+  ddns:
+    image: favonia/cloudflare-ddns:latest
+    container_name: cloudflare-ddns
+    restart: unless-stopped
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [all]
+    security_opt: [no-new-privileges:true]
+    env_file:
+      - ./ddns.env
+  
+  twingate_connector:
+    image: twingate/connector:latest
+    container_name: twingate_connector
+    restart: always
+    env_file:
+      - ./twingate.env
+
+  helloworld:
+    image: karthequian/helloworld:latest
+    container_name: helloworld
+    restart: unless-stopped
+    ports:
+      - 8888:80/tcp
+
+volumes:
+  proxydata:
+  letsencrypt:
