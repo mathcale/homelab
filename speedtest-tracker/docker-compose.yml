@@ -1,0 +1,17 @@
+services:
+  speedtest-tracker:
+    container_name: speedtest-tracker
+    image: henrywhitaker3/speedtest-tracker:latest
+    user: "1000"
+    ports:
+      - 8765:80
+    volumes:
+      - /home/portainer/homelab/speedtest-tracker/config:/config
+    env_file:
+      - stack.env
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "10"
+        max-size: "200k"
+    restart: unless-stopped

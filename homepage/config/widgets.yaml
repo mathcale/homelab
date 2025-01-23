@@ -1,0 +1,18 @@
+---
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+
+- search:
+    provider: google
+    target: _blank
+
+- openweathermap:
+    provider: openweathermap
+    label: Mendes
+    latitude: -22.5242617
+    longitude: -43.7298658
+    units: metric
+    cache: 60

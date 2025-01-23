@@ -1,0 +1,76 @@
+---
+
+- Management:
+  - Proxmox VE:
+      description: Open-source virtualization and LXC platform
+      href: https://pve.home.lan:8006
+      icon: proxmox.png
+      widget:
+        type: proxmox
+        url: https://pve.home.lan:8006
+        username: "{{HOMEPAGE_VAR_PROXMOX_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_PROXMOX_PASSWORD}}"
+
+  - Portainer:
+      description: Universal container management platform
+      href: https://portainer.home.lan:9443
+      icon: portainer.png
+      container: portainer
+      widget:
+        type: portainer
+        url: https://portainer.home.lan:9443
+        env: 2
+        key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
+
+- Network:
+  - pfSense:
+      description: Free and open-source firewall and router solution
+      icon: pfsense.png
+      href: http://pfsense.home.lan:10001
+      widget:
+        proxy: true
+        type: pfsense
+        url: http://pfsense.home.lan:10001
+        username: "{{HOMEPAGE_VAR_PFSENSE_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_PFSENSE_PASSWORD}}"
+        wan: pppoe0
+
+  - Speedtest Tracker:
+      description: Internet speed tracking with Ookla's speedtest-cli
+      href: http://portainer.home.lan:8765
+      icon: speedtest-tracker.png
+      container: speedtest-tracker
+      widget:
+        type: speedtest
+        url: http://portainer.home.lan:8765
+
+- Monitoring:
+  - Grafana:
+      description:
+      href: http://portainer.home.lan:3030
+      icon: grafana.png
+      container: grafana
+      widget:
+        type: grafana
+        url: http://portainer.home.lan:3030
+        username: "{{HOMEPAGE_VAR_GRAFANA_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_GRAFANA_PASSWORD}}"
+
+- Media:
+  - Navidrome:
+      description: Your Personal Streaming Service
+      href: http://portainer.home.lan:4533
+      icon: navidrome.png
+      container: navidrome
+      widget:
+        type: navidrome
+        url: http://portainer.home.lan:4533
+        user: "{{HOMEPAGE_VAR_NAVIDROME_USERNAME}}"
+        token: "{{HOMEPAGE_VAR_NAVIDROME_TOKEN}}"
+        salt: "{{HOMEPAGE_VAR_NAVIDROME_SALT}}"
+
+  - Metube:
+      description: Web UI for yt-dlp
+      href: http://portainer.home.lan:8081
+      icon: metube.png
+      container: metube

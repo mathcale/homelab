@@ -1,0 +1,21 @@
+services:
+  influxdb-v2:
+    image: influxdb:2.7.6-alpine
+    container_name: influxdb-v2
+    hostname: influxdbv2
+    user: "1000"
+    ports:
+      - 8087:8086
+      - 8089:8089/udp
+    volumes:
+      - /home/portainer/homelab/influxdb-v2/data:/var/lib/influxdb2
+      - /home/portainer/homelab/influxdb-v2/config:/etc/influxdb2
+      - /home/portainer/homelab/influxdb-v2/scripts:/docker-entrypoint-initdb.d
+    restart: always
+    networks:
+      - net
+
+networks:
+  net:
+    external:
+      name: proxynet

@@ -1,0 +1,7 @@
+---
+
+providers:
+  openweathermap: "{{HOMEPAGE_VAR_OPENWEATHERMAP_API_KEY}}"
+
+theme: dark
+color: neutral
