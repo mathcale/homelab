@@ -39,7 +39,7 @@
       description:
       icon: nginx-proxy-manager
       href: http://proxy.calegaro.net:81
-      container: proxy
+      container: nginx-proxy-manager
       server: proxy
       widget:
         proxy: true
