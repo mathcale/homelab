@@ -1,24 +1,24 @@
 ---
-
 - Management:
   - Proxmox VE:
       description: Open-source virtualization and LXC platform
-      href: https://pve.home.lan:8006
+      href: https://pve.calegaro.net
       icon: proxmox.png
       widget:
         type: proxmox
-        url: https://pve.home.lan:8006
+        url: https://pve.calegaro.net
         username: "{{HOMEPAGE_VAR_PROXMOX_USERNAME}}"
         password: "{{HOMEPAGE_VAR_PROXMOX_PASSWORD}}"
 
   - Portainer:
       description: Universal container management platform
-      href: https://portainer.home.lan:9443
+      href: https://portainer.calegaro.net
       icon: portainer.png
       container: portainer
+      server: local
       widget:
         type: portainer
-        url: https://portainer.home.lan:9443
+        url: https://portainer.calegaro.net
         env: 2
         key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
 
@@ -26,51 +26,68 @@
   - pfSense:
       description: Free and open-source firewall and router solution
       icon: pfsense.png
-      href: http://pfsense.home.lan:10001
+      href: https://pfsense.calegaro.net
       widget:
         proxy: true
         type: pfsense
-        url: http://pfsense.home.lan:10001
+        url: https://pfsense.calegaro.net
         username: "{{HOMEPAGE_VAR_PFSENSE_USERNAME}}"
         password: "{{HOMEPAGE_VAR_PFSENSE_PASSWORD}}"
         wan: pppoe0
 
+  - Nginx Proxy Manager:
+      description:
+      icon: nginx-proxy-manager
+      href: http://proxy.calegaro.net:81
+      container: proxy
+      server: proxy
+      widget:
+        proxy: true
+        type: npm
+        url: http://proxy.calegaro.net:81
+        username: "{{HOMEPAGE_VAR_NPM_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_NPM_PASSWORD}}"
+
   - Speedtest Tracker:
       description: Internet speed tracking with Ookla's speedtest-cli
-      href: http://portainer.home.lan:8765
+      href: https://speedtest.calegaro.net
       icon: speedtest-tracker.png
       container: speedtest-tracker
+      server: local
       widget:
         type: speedtest
-        url: http://portainer.home.lan:8765
+        url: https://speedtest.calegaro.net
 
 - Monitoring:
   - Grafana:
       description:
-      href: http://portainer.home.lan:3030
+      href: https://grafana.calegaro.net
       icon: grafana.png
       container: grafana
+      server: local
       widget:
         type: grafana
-        url: http://portainer.home.lan:3030
+        url: https://grafana.calegaro.net
         username: "{{HOMEPAGE_VAR_GRAFANA_USERNAME}}"
         password: "{{HOMEPAGE_VAR_GRAFANA_PASSWORD}}"
 
 - Media:
   - Navidrome:
       description: Your Personal Streaming Service
-      href: http://portainer.home.lan:4533
+      href: https://navidrome.calegaro.net
       icon: navidrome.png
       container: navidrome
+      server: local
       widget:
         type: navidrome
-        url: http://portainer.home.lan:4533
+        url: https://navidrome.calegaro.net
         user: "{{HOMEPAGE_VAR_NAVIDROME_USERNAME}}"
         token: "{{HOMEPAGE_VAR_NAVIDROME_TOKEN}}"
         salt: "{{HOMEPAGE_VAR_NAVIDROME_SALT}}"
 
   - Metube:
       description: Web UI for yt-dlp
-      href: http://portainer.home.lan:8081
+      href: https://metube.calegaro.net
       icon: metube.png
       container: metube
+      server: local
