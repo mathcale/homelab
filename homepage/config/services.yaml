@@ -36,7 +36,7 @@
         wan: pppoe0
 
   - Nginx Proxy Manager:
-      description:
+      description: Expose web services on your network with SSL
       icon: nginx-proxy-manager
       href: http://proxy.calegaro.net:81
       container: nginx-proxy-manager
@@ -60,7 +60,6 @@
 
 - Monitoring:
   - Grafana:
-      description:
       href: https://grafana.calegaro.net
       icon: grafana.png
       container: grafana
@@ -70,6 +69,21 @@
         url: https://grafana.calegaro.net
         username: "{{HOMEPAGE_VAR_GRAFANA_USERNAME}}"
         password: "{{HOMEPAGE_VAR_GRAFANA_PASSWORD}}"
+
+  - Netdata:
+      description: Real-time data collection, aggregation and visualization
+      href: https://netdata-pve.calegaro.net
+      icon: netdata
+      widget:
+        type: netdata
+        url: https://netdata-pve.calegaro.net
+
+  - InfluxDB v2:
+      description: Time series database
+      href: https://influxdb-v2.calegaro.net
+      icon: influxdb
+      container: influxdb-v2
+      server: local
 
 - Media:
   - Navidrome:
