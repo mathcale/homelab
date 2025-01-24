@@ -8,8 +8,15 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - "/home/portainer/homelab/homepage/config:/app/config"
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /home/portainer/homelab/homepage/config:/app/config
     env_file:
       - stack.env
     restart: unless-stopped
+    networks:
+      - net
+
+networks:
+  net:
+    external:
+      name: proxynet
+
