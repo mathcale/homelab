@@ -1,0 +1,18 @@
+services:
+  crafty-controller:
+    image: registry.gitlab.com/crafty-controller/crafty-4:latest
+    container_name: crafty-controller
+    ports:
+      - "8443:8443" # HTTPS
+      - "8123:8123" # DYNMAP
+      - "19132:19132/udp" # BEDROCK
+      - "25500-25600:25500-25600" # MC SERV PORT RANGE
+    environment:
+      - TZ=America/Sao_Paulo
+    volumes:
+      - /home/ubuntu/crafty/backups:/crafty/backups
+      - /home/ubuntu/crafty/logs:/crafty/logs
+      - /home/ubuntu/crafty/servers:/crafty/servers
+      - /home/ubuntu/crafty/config:/crafty/app/config
+      - /home/ubuntu/crafty/import:/crafty/import
+    restart: always
