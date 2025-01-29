@@ -99,9 +99,22 @@
         token: "{{HOMEPAGE_VAR_NAVIDROME_TOKEN}}"
         salt: "{{HOMEPAGE_VAR_NAVIDROME_SALT}}"
 
+  - Volumio:
+      description: Music player
+      href: http://volumio.home.lan
+      icon: volumio.png
+
   - Metube:
       description: Web UI for yt-dlp
       href: https://metube.calegaro.net
       icon: metube.png
       container: metube
       server: local
+
+- Gaming:
+  - Crafty Controller:
+      description: A web-based GUI for Minecraft server administration
+      href: https://crafty.calegaro.net
+      icon: crafty-controller.png
+      container: crafty-controller
+      server: crafty

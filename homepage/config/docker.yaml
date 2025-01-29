@@ -7,3 +7,7 @@ proxy:
   host: proxy.home.lan
   port: 2375
 
+crafty:
+  host: crafty.home.lan
+  port: 2375
+
