@@ -11,3 +11,7 @@ crafty:
   host: crafty.home.lan
   port: 2375
 
+servarr:
+  host: servarr.home.lan
+  port: 2375
+

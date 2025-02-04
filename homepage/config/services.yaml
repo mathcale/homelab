@@ -22,17 +22,6 @@
         env: 2
         key: "{{HOMEPAGE_VAR_PORTAINER_API_KEY}}"
 
-  - openmediavault:
-      description: The open network attached storage solution
-      href: https://omv.calegaro.net
-      icon: openmediavault.png
-      widget:
-        type: openmediavault
-        url: https://omv.calegaro.net
-        username: "{{HOMEPAGE_VAR_OMV_USERNAME}}"
-        password: "{{HOMEPAGE_VAR_OMV_PASSWORD}}"
-        method: services.getStatus
-
 - Network:
   - pfSense:
       description: Free and open-source firewall and router solution
@@ -102,7 +91,7 @@
       href: https://navidrome.calegaro.net
       icon: navidrome.png
       container: navidrome
-      server: local
+      server: servarr
       widget:
         type: navidrome
         url: https://navidrome.calegaro.net
