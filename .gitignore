@@ -10,8 +10,8 @@ stack.env
 /grafana/data/*
 !/grafana/data/.gitkeep
 /homepage/config/logs
-/influxdb-pfsense/data/*
-!/influxdb-pfsense/data/.gitkeep
+/influxdb-v1/data/*
+!/influxdb-v1/data/.gitkeep
 /influxdb-v2/data/*
 !/influxdb-v2/data/.gitkeep
 /navidrome/data/*

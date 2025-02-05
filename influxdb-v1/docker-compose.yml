@@ -1,8 +1,8 @@
 services:
-  influxdb-pfsense:
+  influxdb-v1:
     image: influxdb:1.8
-    container_name: influxdb-pfsense
-    hostname: influxdb_pfsense
+    container_name: influxdb-v1
+    hostname: influxdbv1
     mem_limit: 4gb
     restart: always
     user: "1000"
@@ -10,7 +10,7 @@ services:
       - "2003:2003"
       - "8086:8086"
     volumes:
-      - /home/portainer/homelab/influxdb-pfsense/data:/var/lib/influxdb
+      - /home/mathcale/homelab/influxdb-v1/data:/var/lib/influxdb
     env_file:
       - stack.env
     logging:
@@ -24,3 +24,4 @@ networks:
   net:
     external:
       name: proxynet
+
