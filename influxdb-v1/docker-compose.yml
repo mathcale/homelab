@@ -10,7 +10,7 @@ services:
       - "2003:2003"
       - "8086:8086"
     volumes:
-      - /home/mathcale/homelab/influxdb-v1/data:/var/lib/influxdb
+      - /home/portainer/homelab/influxdb-v1/data:/var/lib/influxdb
     env_file:
       - stack.env
     logging:
