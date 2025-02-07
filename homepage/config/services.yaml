@@ -4,6 +4,8 @@
       description: Open-source virtualization and LXC platform
       href: https://pve.calegaro.net
       icon: proxmox.png
+      ping: https://pve.calegaro.net
+      siteMonitor: https://pve.calegaro.net
       widget:
         type: proxmox
         url: https://pve.calegaro.net
@@ -16,6 +18,8 @@
       icon: portainer.png
       container: portainer
       server: local
+      ping: https://portainer.calegaro.net
+      siteMonitor: https://portainer.calegaro.net
       widget:
         type: portainer
         url: https://portainer.calegaro.net
@@ -28,6 +32,8 @@
       icon: portainer.png
       container: portainer
       server: servarr
+      ping: https://portainer-servarr.calegaro.net
+      siteMonitor: https://portainer-servarr.calegaro.net
       widget:
         type: portainer
         url: https://portainer-servarr.calegaro.net
@@ -39,6 +45,8 @@
       description: Free and open-source firewall and router solution
       icon: pfsense.png
       href: https://pfsense.calegaro.net
+      ping: https://pfsense.calegaro.net
+      siteMonitor: https://pfsense.calegaro.net
       widget:
         proxy: true
         type: pfsense
@@ -50,13 +58,15 @@
   - Nginx Proxy Manager:
       description: Expose web services on your network with SSL
       icon: nginx-proxy-manager
-      href: http://proxy.calegaro.net:81
+      href: https://npm.calegaro.net
       container: nginx-proxy-manager
       server: proxy
+      ping: https://npm.calegaro.net
+      siteMonitor: https://npm.calegaro.net
       widget:
         proxy: true
         type: npm
-        url: http://proxy.calegaro.net:81
+        url: https://npm.calegaro.net
         username: "{{HOMEPAGE_VAR_NPM_USERNAME}}"
         password: "{{HOMEPAGE_VAR_NPM_PASSWORD}}"
 
@@ -66,6 +76,8 @@
       icon: speedtest-tracker.png
       container: speedtest-tracker
       server: local
+      ping: https://speedtest.calegaro.net
+      siteMonitor: https://speedtest.calegaro.net
       widget:
         type: speedtest
         url: https://speedtest.calegaro.net
@@ -76,6 +88,8 @@
       icon: grafana.png
       container: grafana
       server: local
+      ping: https://grafana.calegaro.net
+      siteMonitor: https://grafana.calegaro.net
       widget:
         type: grafana
         url: https://grafana.calegaro.net
@@ -86,6 +100,8 @@
       description: Real-time data collection, aggregation and visualization
       href: https://netdata-pve.calegaro.net
       icon: netdata
+      ping: https://netdata-pve.calegaro.net
+      siteMonitor: https://netdata-pve.calegaro.net
       widget:
         type: netdata
         url: https://netdata-pve.calegaro.net
@@ -96,6 +112,8 @@
       icon: influxdb
       container: influxdb-v2
       server: local
+      ping: https://influxdb-v2.calegaro.net
+      siteMonitor: https://influxdb-v2.calegaro.net
 
 - Media:
   - Navidrome:
@@ -104,6 +122,8 @@
       icon: navidrome.png
       container: navidrome
       server: servarr
+      ping: https://navidrome.calegaro.net
+      siteMonitor: https://navidrome.calegaro.net
       widget:
         type: navidrome
         url: https://navidrome.calegaro.net
@@ -115,6 +135,38 @@
       description: Network music player
       href: http://pi4.home.lan
       icon: volumio.png
+      ping: http://pi4.home.lan
+      siteMonitor: http://pi4.home.lan
+
+- Download:
+  - qBittorrent:
+      description: Free and reliable P2P Bittorrent client
+      href: https://qbittorrent.calegaro.net
+      icon: qbittorrent.png
+      container: qbittorrent
+      server: servarr
+      ping: https://qbittorrent.calegaro.net
+      siteMonitor: https://qbittorrent.calegaro.net
+      widget:
+        type: qbittorrent
+        url: https://qbittorrent.calegaro.net
+        username: "{{HOMEPAGE_VAR_QBITTORRENT_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}"
+        enableLeechProgress: true
+
+  - NZBGet:
+      description: Efficient usenet downloader
+      href: https://nzbget.calegaro.net
+      icon: nzbget.png
+      container: nzbget
+      server: servarr
+      ping: https://nzbget.calegaro.net
+      siteMonitor: https://nzbget.calegaro.net
+      widget:
+        type: nzbget
+        url: https://nzbget.calegaro.net
+        username: "{{HOMEPAGE_VAR_NZBGET_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_NZBGET_PASSWORD}}"
 
   - Metube:
       description: Web UI for yt-dlp
@@ -122,6 +174,8 @@
       icon: metube.png
       container: metube
       server: local
+      ping: https://metube.calegaro.net
+      siteMonitor: https://metube.calegaro.net
 
 - Gaming:
   - Crafty Controller:
@@ -130,3 +184,5 @@
       icon: crafty-controller.png
       container: crafty-controller
       server: crafty
+      ping: https://crafty.calegaro.net
+      siteMonitor: https://crafty.calegaro.net
