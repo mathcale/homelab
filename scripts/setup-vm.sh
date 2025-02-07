@@ -15,7 +15,7 @@ sudo apt autoremove -y
 echo ""
 echo "==> Installing must-have packages..."
 
-sudo apt install -y build-essential curl git wget btop vim nfs-common
+sudo apt install -y build-essential curl git wget btop vim nfs-common unattended-upgrades
 
 echo ""
 echo "==> Installing Docker..."
