@@ -1,0 +1,13 @@
+services:
+  speedtest-tracker-2:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker-2
+    ports:
+      - 8080:80
+      - 8443:443
+    env_file:
+      - stack.env
+    volumes:
+      - /home/mathcale/homelab/speedtest-tracker-2/config:/config
+    restart: unless-stopped
+

@@ -18,3 +18,5 @@ stack.env
 !/navidrome/data/.gitkeep
 /speedtest-tracker/config/*
 !/speedtest-tracker/config/.gitkeep
+/speedtest-tracker-2/data/*
+!/speedtest-tracker-2/data/.gitkeep
