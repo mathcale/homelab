@@ -72,15 +72,15 @@
 
   - Speedtest Tracker:
       description: Internet speed tracking with Ookla's speedtest-cli
-      href: https://speedtest.calegaro.net
+      href: https://speedtest2.calegaro.net
       icon: speedtest-tracker.png
-      container: speedtest-tracker
+      container: speedtest-tracker-2
       server: local
-      ping: https://speedtest.calegaro.net
-      siteMonitor: https://speedtest.calegaro.net
+      ping: https://speedtest2.calegaro.net
+      siteMonitor: https://speedtest2.calegaro.net
       widget:
         type: speedtest
-        url: https://speedtest.calegaro.net
+        url: https://speedtest2.calegaro.net
 
 - Monitoring:
   - Grafana:
@@ -138,6 +138,59 @@
       ping: http://pi4.home.lan
       siteMonitor: http://pi4.home.lan
 
+- Arr:
+  - Sonarr:
+      description: See all your upcoming episodes in one convenient location
+      href: https://sonarr.calegaro.net
+      icon: sonarr.png
+      container: sonarr
+      server: servarr
+      ping: https://sonarr.calegaro.net
+      siteMonitor: https://sonarr.calegaro.net
+      widget:
+        type: sonarr
+        url: https://sonarr.calegaro.net
+        key: "{{HOMEPAGE_VAR_SONARR_TOKEN}}"
+
+  - Radarr:
+      description: See all your upcoming movies in one convenient location
+      href: https://radarr.calegaro.net
+      icon: radarr.png
+      container: radarr
+      server: servarr
+      ping: https://radarr.calegaro.net
+      siteMonitor: https://radarr.calegaro.net
+      widget:
+        type: radarr
+        url: https://radarr.calegaro.net
+        key: "{{HOMEPAGE_VAR_RADARR_TOKEN}}"
+
+  - Lidarr:
+      description: Music collection manager for Usenet and BitTorrent users
+      href: https://lidarr.calegaro.net
+      icon: lidarr.png
+      container: lidarr
+      server: servarr
+      ping: https://lidarr.calegaro.net
+      siteMonitor: https://lidarr.calegaro.net
+      widget:
+        type: lidarr
+        url: https://lidarr.calegaro.net
+        key: "{{HOMEPAGE_VAR_LIDARR_TOKEN}}"
+
+  - Prowlarr:
+      description: The Ultimate Indexer Manager
+      href: https://prowlarr.calegaro.net
+      icon: prowlarr.png
+      container: prowlarr
+      server: servarr
+      ping: https://prowlarr.calegaro.net
+      siteMonitor: https://prowlarr.calegaro.net
+      widget:
+        type: prowlarr
+        url: https://prowlarr.calegaro.net
+        key: "{{HOMEPAGE_VAR_PROWLARR_TOKEN}}"
+
 - Download:
   - qBittorrent:
       description: Free and reliable P2P Bittorrent client
@@ -157,7 +210,7 @@
   - NZBGet:
       description: Efficient usenet downloader
       href: https://nzbget.calegaro.net
-      icon: nzbget.png
+      icon: nzbget.svg
       container: nzbget
       server: servarr
       ping: https://nzbget.calegaro.net
