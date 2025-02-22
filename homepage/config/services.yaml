@@ -138,6 +138,21 @@
       ping: http://pi4.home.lan
       siteMonitor: http://pi4.home.lan
 
+  - Jellyfin:
+      description: The Free Software Media System
+      href: https://jellyfin.calegaro.net
+      icon: jellyfin.png
+      ping: https://jellyfin.calegaro.net
+      siteMonitor: https://jellyfin.calegaro.net
+      widget:
+        type: jellyfin
+        url: https://jellyfin.calegaro.net
+        key: cc2b3f03157742a5a38abce3c1cf6028
+        enableBlocks: true
+        enableNowPlaying: false
+        enableUser: true
+        expandOneStreamToTwoRows: false
+
 - Arr:
   - Sonarr:
       description: See all your upcoming episodes in one convenient location
