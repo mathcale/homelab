@@ -1,0 +1,11 @@
+services:
+  filebrowser:
+    image: hurlenko/filebrowser
+    user: "${UID}:${GID}"
+    ports:
+      - 443:8080
+    volumes:
+      - /mnt/data:/data
+      - /home/ubuntu/homelab/filebrowser/config:/config
+    restart: always
+

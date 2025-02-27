@@ -20,3 +20,5 @@ stack.env
 !/speedtest-tracker/config/.gitkeep
 /speedtest-tracker-2/data/*
 !/speedtest-tracker-2/data/.gitkeep
+/filebrowser/config/*
+!/filebrowser/config/.gitkeep
