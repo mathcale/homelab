@@ -133,10 +133,9 @@
 
   - Volumio:
       description: Network music player
-      href: http://pi4.home.lan
+      href: http://volumio.home.lan
       icon: volumio.png
-      ping: http://pi4.home.lan
-      siteMonitor: http://pi4.home.lan
+      ping: http://volumio.home.lan
 
   - Jellyfin:
       description: The Free Software Media System
