@@ -7,9 +7,9 @@ services:
       - 3030:3000
     user: "1000"
     volumes:
-      - /home/portainer/homelab/grafana/data:/var/lib/grafana
-      - /home/portainer/homelab/grafana/config/grafana.ini:/etc/grafana/grafana.ini
-      - /home/portainer/homelab/grafana/provisioning:/etc/grafana/provisioning
+      - /home/ubuntu/homelab/grafana/data:/var/lib/grafana
+      - /home/ubuntu/homelab/grafana/config/grafana.ini:/etc/grafana/grafana.ini
+      - /home/ubuntu/homelab/grafana/provisioning:/etc/grafana/provisioning
     env_file:
       - stack.env
     restart: unless-stopped

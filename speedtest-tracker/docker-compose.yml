@@ -1,17 +1,12 @@
 services:
   speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
     container_name: speedtest-tracker
-    image: henrywhitaker3/speedtest-tracker:latest
-    user: "1000"
     ports:
-      - 8765:80
-    volumes:
-      - /home/portainer/homelab/speedtest-tracker/config:/config
+      - 8080:80
+      - 8443:443
     env_file:
       - stack.env
-    logging:
-      driver: "json-file"
-      options:
-        max-file: "10"
-        max-size: "200k"
+    volumes:
+      - /home/ubuntu/homelab/speedtest-tracker/config:/config
     restart: unless-stopped

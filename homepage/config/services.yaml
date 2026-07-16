@@ -5,7 +5,6 @@
       href: https://pve.calegaro.net
       icon: proxmox.png
       ping: https://pve.calegaro.net
-      siteMonitor: https://pve.calegaro.net
       widget:
         type: proxmox
         url: https://pve.calegaro.net
@@ -19,7 +18,6 @@
       container: portainer
       server: local
       ping: https://portainer.calegaro.net
-      siteMonitor: https://portainer.calegaro.net
       widget:
         type: portainer
         url: https://portainer.calegaro.net
@@ -33,7 +31,6 @@
       container: portainer
       server: servarr
       ping: https://portainer-servarr.calegaro.net
-      siteMonitor: https://portainer-servarr.calegaro.net
       widget:
         type: portainer
         url: https://portainer-servarr.calegaro.net
@@ -41,19 +38,17 @@
         key: "{{HOMEPAGE_VAR_PORTAINER_SERVARR_API_KEY}}"
 
 - Network:
-  - pfSense:
+  - OPNsense:
       description: Free and open-source firewall and router solution
-      icon: pfsense.png
-      href: https://pfsense.calegaro.net
-      ping: https://pfsense.calegaro.net
-      siteMonitor: https://pfsense.calegaro.net
+      icon: opnsense.png
+      href: https://opnsense.calegaro.net
+      ping: https://opnsense.calegaro.net
       widget:
         proxy: true
-        type: pfsense
-        url: https://pfsense.calegaro.net
-        username: "{{HOMEPAGE_VAR_PFSENSE_USERNAME}}"
-        password: "{{HOMEPAGE_VAR_PFSENSE_PASSWORD}}"
-        wan: pppoe0
+        type: opnsense
+        url: https://opnsense.calegaro.net
+        username: "{{HOMEPAGE_VAR_OPNSENSE_USERNAME}}"
+        password: "{{HOMEPAGE_VAR_OPNSENSE_PASSWORD}}"
 
   - Nginx Proxy Manager:
       description: Expose web services on your network with SSL
@@ -62,7 +57,6 @@
       container: nginx-proxy-manager
       server: proxy
       ping: https://npm.calegaro.net
-      siteMonitor: https://npm.calegaro.net
       widget:
         proxy: true
         type: npm
@@ -72,15 +66,14 @@
 
   - Speedtest Tracker:
       description: Internet speed tracking with Ookla's speedtest-cli
-      href: https://speedtest2.calegaro.net
+      href: https://speedtest.calegaro.net
       icon: speedtest-tracker.png
       container: speedtest-tracker-2
       server: local
-      ping: https://speedtest2.calegaro.net
-      siteMonitor: https://speedtest2.calegaro.net
+      ping: https://speedtest.calegaro.net
       widget:
         type: speedtest
-        url: https://speedtest2.calegaro.net
+        url: https://speedtest.calegaro.net
 
 - Monitoring:
   - Grafana:
@@ -89,7 +82,6 @@
       container: grafana
       server: local
       ping: https://grafana.calegaro.net
-      siteMonitor: https://grafana.calegaro.net
       widget:
         type: grafana
         url: https://grafana.calegaro.net
@@ -101,7 +93,6 @@
       href: https://netdata-pve.calegaro.net
       icon: netdata
       ping: https://netdata-pve.calegaro.net
-      siteMonitor: https://netdata-pve.calegaro.net
       widget:
         type: netdata
         url: https://netdata-pve.calegaro.net
@@ -113,7 +104,6 @@
       container: influxdb-v2
       server: local
       ping: https://influxdb-v2.calegaro.net
-      siteMonitor: https://influxdb-v2.calegaro.net
 
 - Media:
   - Navidrome:
@@ -123,7 +113,6 @@
       container: navidrome
       server: servarr
       ping: https://navidrome.calegaro.net
-      siteMonitor: https://navidrome.calegaro.net
       widget:
         type: navidrome
         url: https://navidrome.calegaro.net
@@ -142,7 +131,6 @@
       href: https://jellyfin.calegaro.net
       icon: jellyfin.png
       ping: https://jellyfin.calegaro.net
-      siteMonitor: https://jellyfin.calegaro.net
       widget:
         type: jellyfin
         url: https://jellyfin.calegaro.net
@@ -160,7 +148,6 @@
       container: sonarr
       server: servarr
       ping: https://sonarr.calegaro.net
-      siteMonitor: https://sonarr.calegaro.net
       widget:
         type: sonarr
         url: https://sonarr.calegaro.net
@@ -173,24 +160,22 @@
       container: radarr
       server: servarr
       ping: https://radarr.calegaro.net
-      siteMonitor: https://radarr.calegaro.net
       widget:
         type: radarr
         url: https://radarr.calegaro.net
         key: "{{HOMEPAGE_VAR_RADARR_TOKEN}}"
 
-  - Lidarr:
-      description: Music collection manager for Usenet and BitTorrent users
-      href: https://lidarr.calegaro.net
-      icon: lidarr.png
-      container: lidarr
-      server: servarr
-      ping: https://lidarr.calegaro.net
-      siteMonitor: https://lidarr.calegaro.net
-      widget:
-        type: lidarr
-        url: https://lidarr.calegaro.net
-        key: "{{HOMEPAGE_VAR_LIDARR_TOKEN}}"
+  # - Lidarr:
+  #    description: Music collection manager for Usenet and BitTorrent users
+  #    href: https://lidarr.calegaro.net
+  #    icon: lidarr.png
+  #    container: lidarr
+  #    server: servarr
+  #    ping: https://lidarr.calegaro.net
+  #    widget:
+  #      type: lidarr
+  #      url: https://lidarr.calegaro.net
+  #      key: "{{HOMEPAGE_VAR_LIDARR_TOKEN}}"
 
   - Prowlarr:
       description: The Ultimate Indexer Manager
@@ -199,7 +184,6 @@
       container: prowlarr
       server: servarr
       ping: https://prowlarr.calegaro.net
-      siteMonitor: https://prowlarr.calegaro.net
       widget:
         type: prowlarr
         url: https://prowlarr.calegaro.net
@@ -213,7 +197,6 @@
       container: qbittorrent
       server: servarr
       ping: https://qbittorrent.calegaro.net
-      siteMonitor: https://qbittorrent.calegaro.net
       widget:
         type: qbittorrent
         url: https://qbittorrent.calegaro.net
@@ -228,7 +211,6 @@
       container: nzbget
       server: servarr
       ping: https://nzbget.calegaro.net
-      siteMonitor: https://nzbget.calegaro.net
       widget:
         type: nzbget
         url: https://nzbget.calegaro.net
@@ -242,7 +224,6 @@
       container: metube
       server: local
       ping: https://metube.calegaro.net
-      siteMonitor: https://metube.calegaro.net
 
 - Gaming:
   - Crafty Controller:
@@ -252,4 +233,3 @@
       container: crafty-controller
       server: crafty
       ping: https://crafty.calegaro.net
-      siteMonitor: https://crafty.calegaro.net
