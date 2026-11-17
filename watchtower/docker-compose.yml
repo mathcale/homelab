@@ -5,7 +5,8 @@ services:
     environment:
       DOCKER_API_VERSION: 1.49
       WATCHTOWER_CLEANUP: "true" # remove old images after updating
+      TZ: America/Sao_Paulo
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --schedule "0 2 * * *"
+    command: --schedule "0 0 2 * * *" # sec min hour dom mon dow - daily at 02:00
     restart: always
