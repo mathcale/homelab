@@ -15,18 +15,24 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 echo "==> Installing NFS server..."
+
 apt update
 apt install -y nfs-kernel-server
 
 echo "==> Mounting data disk at ${DATA_DIR}..."
+
 mkdir -p "$DATA_DIR"
+
 if ! grep -q "$DATA_UUID" /etc/fstab; then
   printf 'UUID=%s\t%s\text4\tdefaults\t0\t0\n' "$DATA_UUID" "$DATA_DIR" >> /etc/fstab
 fi
+
 systemctl daemon-reload
+
 mountpoint -q "$DATA_DIR" || mount "$DATA_DIR"
 
 echo "==> Creating share folders..."
+
 install -d -o "${OWNER%:*}" -g "${OWNER#*:}" -m 755 \
   "$DATA_DIR"/{movies,tvshows,downloads,nzbget}
 install -d -o "${OWNER%:*}" -g "${OWNER#*:}" -m 774 "$DATA_DIR/music"
@@ -38,13 +44,16 @@ install -d -o "${OWNER%:*}" -g "${OWNER#*:}" -m 755 \
   "$DATA_DIR"/nzbget/completed/{Movies,Music,Series}
 
 echo "==> Configuring NFS exports..."
+
 install -m 644 "$SCRIPT_DIR/exports" /etc/exports
+
 if ! grep -qE '^\s*manage-gids\s*=\s*y' /etc/nfs.conf; then
   sed -i 's/^\[mountd\]$/[mountd]\nmanage-gids=y/' /etc/nfs.conf
 fi
 
 systemctl enable --now nfs-server
 systemctl restart nfs-server
+
 exportfs -ra
 exportfs -v
 
