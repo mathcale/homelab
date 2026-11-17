@@ -21,7 +21,7 @@ Proxmox VE 9.2 on `pve.home.lan`.
 
 \* not tracked in this repo.
 
-Not currently deployed: `filebrowser`, `influxdb-v1`, `homepage/docker-compose.yml` (homepage runs natively in its LXC).
+Not currently deployed: `influxdb-v1`, `homepage/docker-compose.yml` (homepage runs natively in its LXC).
 
 ## Setup new VM
 
