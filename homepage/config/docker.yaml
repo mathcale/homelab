@@ -1,6 +1,6 @@
 ---
 local:
-  host: docker-socket-proxy
+  host: docker.home.lan
   port: 2375
 
 proxy:
