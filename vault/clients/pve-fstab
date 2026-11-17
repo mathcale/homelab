@@ -1,0 +1,4 @@
+# Lines in /etc/fstab on the Proxmox host - mounted on the host, then bind-mounted into the jellyfin LXC
+vault.home.lan:/mnt/data/movies   /mnt/nfs-vault/movies   nfs4  rw,relatime,vers=4.2,hard,timeo=600,retrans=2,_netdev,x-systemd.automount,x-systemd.mount-timeout=30,x-systemd.requires=network-online.target  0  0
+vault.home.lan:/mnt/data/tvshows  /mnt/nfs-vault/tvshows  nfs4  rw,relatime,vers=4.2,hard,timeo=600,retrans=2,_netdev,x-systemd.automount,x-systemd.mount-timeout=30,x-systemd.requires=network-online.target  0  0
+vault.home.lan:/mnt/data/music    /mnt/nfs-vault/music    nfs4  rw,relatime,vers=4.2,hard,timeo=600,retrans=2,_netdev,x-systemd.automount,x-systemd.mount-timeout=30,x-systemd.requires=network-online.target  0  0

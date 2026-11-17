@@ -1,0 +1,2 @@
+# Data disk entry in /etc/fstab on vault (disk on the passed-through SATA controller)
+UUID=326c9605-ff73-4116-80c2-7fa8a7f5b78d	/mnt/data	ext4	defaults	0	0

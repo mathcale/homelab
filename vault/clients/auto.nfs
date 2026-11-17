@@ -1,0 +1,6 @@
+# /etc/auto.nfs on servarr - mounted under /mnt/nfs/<name>
+music -fstype=nfs4,rw vault.home.lan:/mnt/data/music
+movies -fstype=nfs4,rw vault.home.lan:/mnt/data/movies
+tvshows -fstype=nfs4,rw vault.home.lan:/mnt/data/tvshows
+downloads -fstype=nfs4,rw vault.home.lan:/mnt/data/downloads
+nzbget -fstype=nfs4,rw vault.home.lan:/mnt/data/nzbget

@@ -1,0 +1,6 @@
+# /etc/exports on vault (192.168.1.53)
+/mnt/data/music 192.168.1.0/255.255.255.0(rw,no_subtree_check,insecure,nohide,no_root_squash,anonuid=1000,anongid=1000)
+/mnt/data/movies 192.168.1.0/255.255.255.0(rw,no_subtree_check,insecure,nohide,no_root_squash,anonuid=1000,anongid=1000)
+/mnt/data/tvshows 192.168.1.0/255.255.255.0(rw,no_subtree_check,insecure,nohide,no_root_squash,anonuid=1000,anongid=1000)
+/mnt/data/downloads 192.168.1.0/255.255.255.0(rw,no_subtree_check,insecure,nohide,no_root_squash,anonuid=1000,anongid=1000)
+/mnt/data/nzbget 192.168.1.0/255.255.255.0(rw,no_subtree_check,insecure,nohide,no_root_squash,anonuid=1000,anongid=1000)

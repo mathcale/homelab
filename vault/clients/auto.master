@@ -1,0 +1,2 @@
+# Line added to /etc/auto.master on servarr (apt install autofs)
+/mnt/nfs /etc/auto.nfs --ghost --timeout=0
